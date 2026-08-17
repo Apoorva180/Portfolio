@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apoorva PR – Resume</title>
+    <style>
+        /* ── PAGE SETUP ── */
+        @page {
+            size: A4;
+            margin: 14mm 16mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10.5pt;
+            color: #1a1a1a;
+            background: #fff;
+            line-height: 1.45;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .header h1 {
+            font-size: 18pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        .header .contact-line {
+            font-size: 9.5pt;
+            color: #555;
+            margin-top: 2px;
+        }
+
+        .header .contact-line a {
+            color: #1155cc;
+            text-decoration: underline;
+        }
+
+        /* ── SECTION ── */
+        .section {
+            margin-top: 10px;
+        }
+
+        .section-title {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #1155cc;
+            padding-bottom: 2px;
+            border-bottom: 1.5px solid #1155cc;
+            margin-bottom: 6px;
+        }
+
+        /* ── SUMMARY ── */
+        .summary p {
+            font-size: 10pt;
+            color: #222;
+        }
+
+        /* ── SKILLS ── */
+        .skills ul {
+            list-style: disc;
+            padding-left: 18px;
+        }
+
+        .skills ul li {
+            font-size: 9.8pt;
+            margin-bottom: 3px;
+            color: #1a1a1a;
+        }
+
+        /* ── WORK ENTRY ── */
+        .work-entry {
+            margin-bottom: 14px;
+        }
+
+        .work-entry .role-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .work-entry .role {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .work-entry .company {
+            font-size: 10.5pt;
+            font-weight: 700;
+            text-decoration: underline;
+            color: #000;
+            text-align: center;
+            flex: 1;
+        }
+
+        .work-entry .dates {
+            font-size: 10pt;
+            font-style: italic;
+            color: #333;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .work-entry ul {
+            list-style: disc;
+            padding-left: 18px;
+        }
+
+        .work-entry ul li {
+            font-size: 10pt;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        /* ── EDUCATION ── */
+        .edu-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .edu-left {
+            font-size: 10pt;
+        }
+
+        .edu-left .degree {
+            font-weight: 700;
+        }
+
+        .edu-right {
+            text-align: right;
+            font-size: 10pt;
+        }
+
+        .edu-right .dates {
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .edu-right .college {
+            font-weight: 700;
+        }
+
+        /* ── PRINT ── */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* ── HELPERS ── */
+        b,
+        strong {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ════════════════════ HEADER ════════════════════ -->
+    <!--
+    ✏️ EDIT YOUR PERSONAL DETAILS HERE
+  -->
+    <div class="header">
+        <h1>Apoorva PR</h1>
+        <div class="contact-line">
+            <a href="https://www.linkedin.com/in/apoorva-p-r-b44274223" target="_blank">LinkedIn</a>
+            &nbsp;|&nbsp; +91 9741676877
+            &nbsp;|&nbsp; apoorva.pr@gmail.com
+            &nbsp;|&nbsp; <a href="#">Portfolio</a>
+            <!-- ✏️ Replace Portfolio link after deploying to Netlify -->
+        </div>
+    </div>
+
+    <!-- ════════════════════ SUMMARY ════════════════════ -->
+    <!--
+    ✏️ EDIT YOUR SUMMARY HERE
+  -->
+    <div class="section summary">
+        <div class="section-title">Summary</div>
+        <p>
+            Software Engineer with nearly 3+ years of experience developing SaaS and client-facing web applications
+            contributing to $1M+ in platform revenue. Product-focused, leveraging AI tools to automate dev workflows and
+            boost code quality with a strong track record of delivering user-centric solutions in fast-paced, dynamic
+            startup environments.
+        </p>
+    </div>
+
+    <!-- ════════════════════ SKILLS ════════════════════ -->
+    <!--
+    ✏️ EDIT YOUR SKILLS HERE — Add or remove items from each list
+  -->
+    <div class="section skills">
+        <div class="section-title">Skills</div>
+        <ul>
+            <li>
+                <strong>Frontend</strong>: ReactJS | NextJS | Javascript (ES6+) | TypeScript | HTML5 | CSS3 | Redux |
+                React Testing Library | SASS | Material UI
+            </li>
+            <li>
+                <strong>Tools &amp; Infrastructure</strong>: Context API | Yarn | Jest | SCSS | CI/CD | Azure | AWS |
+                Git | Github | Figma | Babel | NPM | Webpack | TailwindCSS
+            </li>
+            <li>
+                Data structures and Algorithms | Frontend Architecture | Asynchronous request handling | Micro frontend
+            </li>
+        </ul>
+    </div>
+
+    <!-- ════════════════════ WORK HISTORY ════════════════════ -->
+    <div class="section">
+        <div class="section-title">Work History</div>
+
+        <!-- ── JOB 1 ── -->
+        <!--
+      ✏️ EDIT YOUR PRIMARY JOB DETAILS HERE
+      - Change role, company, dates
+      - Add/remove/edit bullet points below
+    -->
+        <div class="work-entry">
+            <div class="role-row">
+                <span class="role">Software Developer</span>
+                <span class="company">Codewave, Bengaluru</span>
+                <span class="dates">07/2023 – Present</span>
+            </div>
+            <ul>
+                <li>
+                    Engineered a <strong>modular PageShelf and Provider registry</strong> for a monorepo
+                    <strong>micro-frontend platform</strong> using Puck Page Builder, enabling drag-and-drop dynamic
+                    page
+                    creation and reducing page setup time by <strong>40%</strong> for non-technical users.
+                </li>
+                <li>
+                    Built <strong>real-time service ticket and document management modules</strong> with live commenting
+                    threads, integrating optimized <strong>GraphQL queries and mutations</strong> to cut data retrieval
+                    latency by <strong>35%</strong> and improve team response efficiency.
+                </li>
+                <li>
+                    Developed <strong>custom keyboard accessibility shortcuts</strong> and resolved critical
+                    cross-package
+                    <strong>UI rendering conflicts</strong>, enhancing system-wide accessibility compliance and
+                    reducing reported UI bug count by <strong>50%</strong>.
+                </li>
+                <li>
+                    Led <strong>client-facing frontend delivery</strong> of a wellness professional platform,
+                    translating
+                    business goals into high-fidelity interactive pages — Homepage, Plans, About, and Blogs — powered by
+                    <strong>GSAP animations</strong>, improving user engagement by <strong>60%</strong>.
+                </li>
+                <li>
+                    Designed and implemented a <strong>secure multi-step professional onboarding Stepper flow</strong>
+                    with
+                    role-based authentication and real-time dashboard features, integrating
+                    <strong>end-to-end REST API pipelines</strong> for a seamless user experience.
+                </li>
+                <li>
+                    Tested dynamic forms, validation components, and authentication routes using <strong>Jest and React
+                        Testing Library (RTL)</strong> under <strong>Test-Driven Development (TDD)</strong> guidelines,
+                    reducing manual testing effort by <strong>30%</strong> and production error rates by
+                    <strong>35%</strong>.
+                </li>
+                <li>
+                    Architected the <strong>Knowledge Hub search module</strong> with dynamic React data grids, faceted
+                    filters, and full REST API integration, reducing content search time by <strong>45%</strong> across
+                    the
+                    student user base.
+                </li>
+                <li>
+                    Built the <strong>'My Notes' workspace module</strong> featuring real-time state synchronization,
+                    offline cache support, and dynamic note cards, achieving <strong>30% improvement</strong> in student
+                    session retention and daily active usage.
+                </li>
+                <li>
+                    Developed <strong>responsive UI components</strong>, Swiper carousels, and interactive service
+                    filter
+                    flows, while debugging complex multi-form registration states — reducing critical form error rates
+                    by
+                    <strong>40%</strong> across key user journeys.
+                </li>
+                <li>
+                    Acquired in-depth <strong>frontend engineering training</strong> and maintained styling consistency
+                    across legacy repository branches during the initial 3-month onboarding period, improving existing
+                    codebase maintainability.
+                </li>
+            </ul>
+        </div>
+
+        <!-- ── JOB 2 ── -->
+        <!--
+      ✏️ EDIT YOUR INTERNSHIP DETAILS HERE
+    -->
+        <div class="work-entry">
+            <div class="role-row">
+                <span class="role">Web Developer Intern</span>
+                <span class="company">Kodnest, Bengaluru</span>
+                <span class="dates">03/2023 – 06/2023</span>
+            </div>
+            <ul>
+                <li>
+                    Completed an <strong>intensive 4-month frontend training program</strong>, building clean, fully
+                    <strong>responsive landing pages</strong> and functional UI utilities (e.g., Tip Splitter app)
+                    using HTML, CSS, and JavaScript.
+                </li>
+                <li>
+                    Strengthened foundational knowledge in
+                    <strong>Data Structures &amp; Algorithms, DBMS, and software engineering principles</strong>,
+                    enabling a strong technical transition into production development.
+                </li>
+            </ul>
+        </div>
+
+    </div><!-- end work history -->
+
+    <!-- ════════════════════ EDUCATION ════════════════════ -->
+    <!--
+    ✏️ EDIT YOUR EDUCATION DETAILS HERE
+  -->
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-entry">
+            <div class="edu-left">
+                <div class="degree">Bachelor of Engineering</div>
+                <div>Computer Science</div>
+            </div>
+            <div class="edu-right">
+                <div class="dates">07/2018 – 05/2022</div>
+                <div class="college">KVG College of Engineering</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

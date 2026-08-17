@@ -1,0 +1,36 @@
+.app {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* Section separator gradient */
+main>section+section {
+  position: relative;
+}
+
+main>section+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.06), transparent);
+  pointer-events: none;
+}
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer code {
+  color: var(--accent-red);
+  font-family: monospace;
+  background: rgba(241, 25, 70, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+}

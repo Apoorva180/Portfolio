@@ -1,0 +1,212 @@
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem 0 5rem;
+    background: var(--bg-primary);
+    overflow: hidden;
+}
+
+.contact__canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.contact__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Globe */
+.globe-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.globe-scene {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.globe-sphere {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+.globe-core {
+    position: absolute;
+    inset: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #3d7be8, #1a3a8a 50%, #0a1840);
+    box-shadow:
+        inset -20px -20px 40px rgba(0, 0, 80, 0.5),
+        inset 10px 10px 30px rgba(100, 160, 255, 0.2),
+        0 0 60px rgba(30, 60, 180, 0.3);
+}
+
+.globe-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(180, 200, 255, 0.3);
+    animation: globe-spin linear infinite;
+}
+
+.globe-ring--1 {
+    inset: 0;
+    animation-duration: 8s;
+    border-style: dashed;
+}
+
+.globe-ring--2 {
+    inset: -15px;
+    animation-duration: 14s;
+    animation-direction: reverse;
+    border-color: rgba(241, 25, 70, 0.25);
+}
+
+.globe-ring--3 {
+    inset: -35px;
+    animation-duration: 20s;
+    border-color: rgba(100, 150, 255, 0.15);
+    border-style: dotted;
+}
+
+@keyframes globe-spin {
+    from {
+        transform: rotate(0deg) rotateY(60deg);
+    }
+
+    to {
+        transform: rotate(360deg) rotateY(60deg);
+    }
+}
+
+.globe-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.contact__globe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form */
+.contact__form-wrap {
+    background: rgba(13, 18, 36, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.contact__title {
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.contact__subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.contact__label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.contact__input {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.25s, background 0.25s;
+    width: 100%;
+    resize: none;
+}
+
+.contact__input::placeholder {
+    color: rgba(170, 166, 195, 0.45);
+}
+
+.contact__input:focus {
+    border-color: rgba(241, 25, 70, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.contact__textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact__submit {
+    padding: 0.9rem 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    align-self: flex-start;
+}
+
+.contact__submit:hover:not(:disabled) {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    box-shadow: 0 4px 20px rgba(241, 25, 70, 0.35);
+}
+
+.contact__submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact__globe {
+        order: -1;
+    }
+}
