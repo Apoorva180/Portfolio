@@ -12,6 +12,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    pointer-events: none;
 }
 
 .contact__container {
@@ -26,22 +27,29 @@
     align-items: center;
 }
 
-/* 3D Spinning Cosmic Planet Canvas Wrapper */
+/* Vibrant 3D Planet Wrapper */
 .contact__globe {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    cursor: pointer;
 }
 
 .cosmic-planet-wrapper {
     position: relative;
     width: 100%;
-    max-width: 440px;
+    max-width: 480px;
     aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: drop-shadow(0 0 45px rgba(241, 25, 70, 0.45));
+    transition: filter 0.3s ease;
+}
+
+.cosmic-planet-wrapper:hover {
+    filter: drop-shadow(0 0 60px rgba(241, 25, 70, 0.65)) drop-shadow(0 0 30px rgba(139, 92, 246, 0.5));
 }
 
 .cosmic-planet-canvas {
@@ -50,15 +58,17 @@
     display: block;
 }
 
-/* Form */
+/* Form Container */
 .contact__form-wrap {
-    background: rgba(13, 18, 36, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    background: rgba(13, 18, 36, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
     padding: 2.5rem;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(241, 25, 70, 0.12);
+    position: relative;
+    overflow: hidden;
 }
 
 .contact__title {
@@ -67,30 +77,95 @@
 }
 
 .contact__subtitle {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
-.contact__success-banner {
+/* Direct Email One-Click Copy Card */
+.contact__direct-email-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 12px 16px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(34, 197, 94, 0.15);
-    border: 1px solid rgba(34, 197, 94, 0.3);
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.25s, background 0.25s;
+}
+
+.contact__direct-email-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(241, 25, 70, 0.4);
+}
+
+.contact__email-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact__email-icon {
+    color: #f11946;
+}
+
+.contact__email-label {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.contact__email-val {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.contact__copy-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 6px 14px;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.contact__copy-btn:hover {
+    background: rgba(241, 25, 70, 0.2);
+    border-color: #f11946;
+    color: #fff;
+}
+
+/* Success Banner */
+.contact__success-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(34, 197, 94, 0.14);
+    border: 1px solid rgba(34, 197, 94, 0.35);
     color: #4ade80;
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-bottom: 1.2rem;
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-bottom: 1.4rem;
 }
 
 .contact__form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.3rem;
 }
 
 .contact__field {
@@ -108,13 +183,13 @@
 .contact__input {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 0.85rem 1.1rem;
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
     color: var(--text-primary);
     font-family: inherit;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     outline: none;
-    transition: border-color 0.25s, background 0.25s;
+    transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
     width: 100%;
 }
 
@@ -123,8 +198,9 @@
 }
 
 .contact__input:focus {
-    border-color: rgba(99, 102, 241, 0.5);
+    border-color: #f11946;
     background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 16px rgba(241, 25, 70, 0.25);
 }
 
 .contact__textarea {
@@ -133,27 +209,28 @@
 }
 
 .contact__submit {
-    padding: 0.85rem 2.2rem;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    color: var(--text-primary);
+    padding: 0.9rem 2.4rem;
+    background: linear-gradient(135deg, #f11946 0%, #ff5e3a 100%);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
     font-family: inherit;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.25s ease;
     align-self: flex-start;
+    box-shadow: 0 6px 20px rgba(241, 25, 70, 0.4);
 }
 
 .contact__submit:hover:not(:disabled) {
-    background: var(--accent-red);
-    border-color: var(--accent-red);
-    box-shadow: 0 4px 20px rgba(241, 25, 70, 0.35);
+    opacity: 0.94;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(241, 25, 70, 0.55);
 }
 
 .contact__submit:disabled {
-    opacity: 0.6;
+    opacity: 0.65;
     cursor: not-allowed;
 }
 

@@ -214,5 +214,5 @@ export const contactData = {
   overline: "GET IN TOUCH",
   title: "Contact.",
   subtitle: "Feel free to reach out! Whether you have a question, want to collaborate, or just want to say hi — my inbox is always open.",
-  email: "apoorva@codewave.com",
+  email: "aapoorva481@gmail.com",
 };
