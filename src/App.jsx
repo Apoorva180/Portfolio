@@ -21,9 +21,6 @@ function App() {
         <Projects />
         <Contact />
       </main>
-      <footer className="footer">
-        <p>Designed & Built with ❤️ — Update content in <code>src/data/portfolioData.js</code></p>
-      </footer>
     </div>
   );
 }

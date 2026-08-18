@@ -181,16 +181,6 @@ export const projects = [
     gradient: "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)",
   },
   {
-    name: "CulinaryCraft - Animated Food Customizer",
-    description:
-      "Interactive React & Framer Motion gourmet food studio featuring 3D visual bowl assembly, real-time macronutrient calculator, step-by-step cooking masterclasses, and celebratory checkout flow.",
-    tags: ["#React", "#Vite", "#FramerMotion", "#TailwindCSS", "#CanvasConfetti"],
-    image: null,
-    github: "https://github.com/Apoorva180/culinary-craft-app",
-    live: "https://Apoorva180.github.io/culinary-craft-app/",
-    gradient: "linear-gradient(135deg, #ff5e3a 0%, #8b5cf6 100%)",
-  },
-  {
     name: "SpendSmart - Expense Tracker Pro",
     description:
       "Modern dark glassmorphism personal finance tracker featuring real-time category analytics with Recharts donut chart, interactive transaction management, search/filter/sort, and localStorage persistence.",
@@ -224,5 +214,5 @@ export const contactData = {
   overline: "GET IN TOUCH",
   title: "Contact.",
   subtitle: "Feel free to reach out! Whether you have a question, want to collaborate, or just want to say hi — my inbox is always open.",
-  email: "your.email@example.com",
+  email: "apoorva@codewave.com",
 };
