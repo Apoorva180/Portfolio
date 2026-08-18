@@ -190,6 +190,16 @@ export const projects = [
     live: "https://github.com/Apoorva180/culinary-craft-app",
     gradient: "linear-gradient(135deg, #ff5e3a 0%, #8b5cf6 100%)",
   },
+  {
+    name: "SpendSmart - Expense Tracker Pro",
+    description:
+      "Modern dark glassmorphism personal finance tracker featuring real-time category analytics with Recharts donut chart, interactive transaction management, search/filter/sort, and localStorage persistence.",
+    tags: ["#React", "#Vite", "#Recharts", "#FramerMotion", "#LocalStorage"],
+    image: null,
+    github: "https://github.com/Apoorva180/expense-tracker-pro",
+    live: "https://github.com/Apoorva180/expense-tracker-pro",
+    gradient: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
+  },
 ];
 
 export const achievements = [
