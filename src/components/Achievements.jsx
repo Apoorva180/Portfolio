@@ -1,72 +1,72 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { achievementsData } from '../data/portfolioData';
 import { Quote } from 'lucide-react';
 import './Achievements.css';
 
+// Container stagger controls
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.18,
-      delayChildren: 0.1,
+      staggerChildren: 0.35, // Deliberate, smooth 350ms gap between card 1 -> 2 -> 3 -> 4 -> 5
+      delayChildren: 0.15,
     },
   },
 };
 
+// Smooth sequential card entrance variant
 const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  hidden: { opacity: 0, y: 50, scale: 0.94 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
-      type: 'spring',
-      damping: 20,
-      stiffness: 100,
+      duration: 0.65,
+      ease: [0.25, 0.1, 0.25, 1.0], // Smooth cubic bezier curve
     },
   },
 };
 
 const Achievements = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
-
   return (
     <section className="achievements" id="achievements">
-      <div className="achievements__container" ref={ref}>
+      <div className="achievements__container">
         {/* Section Header */}
         <motion.div
           className="achievements__header"
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
           <p className="section-overline">{achievementsData.overline}</p>
           <h2 className="section-title achievements__title">{achievementsData.title}</h2>
         </motion.div>
 
-        {/* 3-Grid Cards Container with Staggered Scroll Animation */}
+        {/* 3-Grid Cards Container with Sequential Staggered Scroll Animation */}
         <motion.div
           className="achievements__grid"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
           {achievementsData.items.map((item) => (
             <motion.div
               key={item.id}
               className="achievement-card"
               variants={cardVariants}
-              whileHover={{ y: -6, transition: { duration: 0.2 } }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
               {/* Top Quote Icon */}
               <div className="achievement-card__quote">
-                <Quote size={28} />
+                <Quote size={24} />
               </div>
 
-              {/* Achievement Content */}
+              {/* Achievement Title */}
               <p className="achievement-card__title">{item.title}</p>
 
               {/* Card Footer: Year & Institution & Badge */}
