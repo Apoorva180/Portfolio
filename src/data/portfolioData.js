@@ -187,7 +187,7 @@ export const projects = [
     tags: ["#React", "#Vite", "#FramerMotion", "#TailwindCSS", "#CanvasConfetti"],
     image: null,
     github: "https://github.com/Apoorva180/culinary-craft-app",
-    live: "https://github.com/Apoorva180/culinary-craft-app",
+    live: "https://Apoorva180.github.io/culinary-craft-app/",
     gradient: "linear-gradient(135deg, #ff5e3a 0%, #8b5cf6 100%)",
   },
   {
@@ -197,7 +197,7 @@ export const projects = [
     tags: ["#React", "#Vite", "#Recharts", "#FramerMotion", "#LocalStorage"],
     image: null,
     github: "https://github.com/Apoorva180/expense-tracker-pro",
-    live: "https://github.com/Apoorva180/expense-tracker-pro",
+    live: "https://Apoorva180.github.io/expense-tracker-pro/",
     gradient: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
   },
 ];
