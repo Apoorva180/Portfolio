@@ -192,23 +192,52 @@ export const projects = [
   },
 ];
 
-export const achievements = [
-  {
-    title: "Hackathon Winner",
-    description: "Won 1st place at XYZ National Hackathon 2023, competing against 500+ teams from across the country.",
-    icon: "🏆",
-  },
-  {
-    title: "Open Source Contributor",
-    description: "Active contributor to popular open-source projects with 50+ merged pull requests.",
-    icon: "⭐",
-  },
-  {
-    title: "Technical Blog",
-    description: "Published 20+ technical articles on Medium with 10,000+ total reads on topics like React, DSA, and system design.",
-    icon: "✍️",
-  },
-];
+export const achievementsData = {
+  overline: "MAJESTIC LEGACY.",
+  title: "Achievements.",
+  items: [
+    {
+      id: 1,
+      title: "Elected as Cultural Secretary Of College",
+      year: "2020-2021",
+      institution: "KVG College Of Engineering",
+      badgeText: "KVG",
+      badgeColor: "linear-gradient(135deg, #6366f1, #8b5cf6)"
+    },
+    {
+      id: 2,
+      title: "Volunteered in organizing and coordinating technical programs at the college level - Aarambam",
+      year: "2022",
+      institution: "College Technical Event - Aarambam",
+      badgeText: "AAR",
+      badgeColor: "linear-gradient(135deg, #f11946, #ff5e3a)"
+    },
+    {
+      id: 3,
+      title: "Secured 1st place in the Inter Fest – Cultural Event",
+      year: "2020",
+      institution: "KVG Engineering College",
+      badgeText: "1ST",
+      badgeColor: "linear-gradient(135deg, #22c55e, #10b981)"
+    },
+    {
+      id: 4,
+      title: "Secured 1st place in the Fest – Cultural Event",
+      year: "2022",
+      institution: "Vivekananda Engineering College",
+      badgeText: "1ST",
+      badgeColor: "linear-gradient(135deg, #3b82f6, #06b6d4)"
+    },
+    {
+      id: 5,
+      title: "Secured 1st place in C++ Programming Quiz",
+      year: "2021",
+      institution: "Codes Crackers",
+      badgeText: "C++",
+      badgeColor: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    }
+  ]
+};
 
 export const contactData = {
   overline: "GET IN TOUCH",

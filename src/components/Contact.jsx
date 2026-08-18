@@ -260,17 +260,19 @@ const Contact = () => {
         setSending(true);
 
         try {
-            // Send email directly via Web3Forms API to aapoorva481@gmail.com
-            const res = await fetch('https://api.web3forms.com/submit', {
+            // Direct email delivery to aapoorva481@gmail.com via FormSubmit AJAX API
+            const res = await fetch('https://formsubmit.co/ajax/aapoorva481@gmail.com', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
                 body: JSON.stringify({
-                    access_key: 'e0df8502-3c22-44df-9cf8-b3287dbec02b', // Free Web3Forms public API key
                     name: form.name,
                     email: form.email,
                     message: form.message,
-                    subject: `Portfolio Contact from ${form.name}`,
-                    to_email: 'aapoorva481@gmail.com'
+                    _subject: `New Portfolio Message from ${form.name}`,
+                    _template: 'table'
                 })
             });
 
@@ -278,7 +280,7 @@ const Contact = () => {
                 setSent(true);
                 setForm({ name: '', email: '', message: '' });
             } else {
-                throw new Error('Web submit error');
+                throw new Error('Formsubmit API error');
             }
         } catch {
             // Fallback: Open mailto client to aapoorva481@gmail.com

@@ -209,18 +209,31 @@
 }
 
 .contact__submit {
-    padding: 0.9rem 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.95rem 2.2rem;
     background: linear-gradient(135deg, #f11946 0%, #ff5e3a 100%);
     border: none;
-    border-radius: 12px;
-    color: #fff;
+    border-radius: 99px;
+    color: #ffffff;
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.25s ease;
     align-self: flex-start;
     box-shadow: 0 6px 20px rgba(241, 25, 70, 0.4);
+    line-height: 1;
+}
+
+.contact__submit span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    line-height: 1;
 }
 
 .contact__submit:hover:not(:disabled) {
